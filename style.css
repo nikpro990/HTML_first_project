@@ -3,12 +3,33 @@
     color: white;
 }
 
+@media (width: 434px){
+    img{
+      width: 200px;
+    }
+}
+
+@media (width: 1629px){
+    img{
+      width: 1000px;
+    }
+}
+
+a{
+  text-decoration: none;
+}
+
 html{
     scroll-behavior: smooth;
 }
 footer{
   margin-top: 100px;
 }
+
+span{
+    font-size: 25px;
+}
+
 h1{
     text-align: center;
 }
@@ -17,7 +38,7 @@ h2{
 }
 p{
     font-size: 25px;
-    text-align: center;
+    
 }
 img{
     border-radius: 10px;
