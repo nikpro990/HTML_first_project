@@ -94,6 +94,85 @@ header:hover{
     transform: scale(1.1);
 }
 
+.stage{
+  position: relative;
+  width: 360px;
+  height: 220px;
+  margin: 24px auto;
+  background-color: #fff7ed;
+  
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.card{
+  margin-top: 30px;
+  position: relative;
+  width: 260px;
+  padding: 16px;
+  background: lightsalmon;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+
+.badge{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ef4444;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 99999px;
+}
+
+.parent{
+  border: 2px solid red;
+  margin-top: 30px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+}
+
+.child{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: coral;
+}
+
+.box{
+  width: 150px;
+  height: 80px;
+  margin: 10px;
+  background-color: lightgreen;
+  border: 2px solid green;
+
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.box{
+  width: 80px;
+  height: 80px;
+  background-color: yellow;
+  border: 2px solid orange;
+}
+
+
 .pxx{
   background-color: red;
   font-size: 20px;
