@@ -96,7 +96,36 @@ header:hover{
 }
 
 .flexing{
+  animation-name: card-anim;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
   display: inline-flex;
+}
+
+.jessi-dialog{
+  display: none;
+  animation-name: card-anim;
+  animation-duration: 0.3s;
+  background-image: linear-gradient(90deg,grey,rgb(173, 173, 173));
+  border-radius: 30%;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 1px 1px 9px black;
+  color: white;
+  font-size: 20px;
+}
+
+@keyframes card-anim {  
+  0% {
+    transform: scale(0.5);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+
 }
 
 img{
@@ -112,10 +141,17 @@ img{
   border-radius: 10px;
   height: 300px;
   transition: all 0.3s ease;
+  animation-name: cardName;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  position: relative;
   background-color: grey;
   margin-bottom: 30px;
   margin-left: 20px;
 }
+
+
 .container:hover{
   transform: scale(1.1);
 }
@@ -157,6 +193,8 @@ img{
   padding: 4px 8px;
   border-radius: 99999px;
 }
+
+
 
 .parent{
   border: 2px solid red;
