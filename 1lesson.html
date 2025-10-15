@@ -130,10 +130,6 @@
     <div class="box abs">B (absolute)</div>
     <div class="box">C</div>
 </div>
-<div class="card">
-    Карточка
-    <span class="badge">NEW</span>
-</div>
 <div class="stage">
     <div class="modal">По центру</div>
 </div>
@@ -157,6 +153,39 @@
         <img src="https://preview.redd.it/is-gustavo-fring-his-real-name-v0-3cmh5jrsr4df1.jpeg?width=640&crop=smart&auto=webp&s=c3fda0f377e177daecb473f7a951c6828c916b12" alt="my name is gustav but you can call me gus">
     </div>
 </div>
+<div class="inline">
+<div class="card">
+    <h3>Заголовок</h3>
+    <p>Немного текста про карточки</p>
+</div>
+<div class="grad">Мягкий градиентный фон</div>
+</div>
+<form class="search" action="/search" method="get">
+    <label for="q">Поиск:</label>
+    <input id="q" name="q" type="text" placeholder="Что ищем?">
+    <button class="accept" type="submit">Найти</button>
+</form>
+<label for="msg">Сообщение</label>
+<textarea id="msg" name="message" rows="4" placeholder="message"></textarea>
+<label for="city">Город</label>
+<select id="city" name="city">
+    <option value="msk">Москва</option>
+    <option value="spb">Санкт-Петербург</option>
+    <option value="mnsk">Минск</option>
+</select>
+<form class="auth" action="/singup" metod="post">
+    <h3 class="auth_title">Регестрация</h3>
+    <label class="auth_label">Имя
+        <input class="auth_input" name="name" type="text" placeholder="Ваше имя" required="">
+    </label>
+    <label class="auth_label">Email
+        <input class="auth_input" name="email" type="email" placeholder="your@mail.com" required="">
+    </label>
+    <label class="auth_label">Пароль
+        <input class="auth_input" name="name" type="password" placeholder="......" required="">
+    </label>
+    <button class="auth_btn" type="submit">Создать</button>
+</form>
 </main>
 <footer>
     <h1 id="vnizz">Подвал</h1>

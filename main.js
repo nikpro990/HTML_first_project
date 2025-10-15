@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const gustav = document.getElementById("gustav"); 
     const gustavdialog = document.getElementById("gustav-dialog");
     const walter = document.getElementById("walter");
-    const walterdialog = document.getElementById("walter-dialog")
+    const walterdialog = document.getElementById("walter-dialog");
     const jessidialog = document.getElementById("jessi-dialog");
     const jessi = document.getElementById("jessi");
-    
+
     let clickcount = 0; 
     jessi.addEventListener("click", () => {
        clickcount++;
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
        }
        if(clickcount == 2) {
         jessidialog.style.display = "none";
+        
         clickcount = 0; 
       }
     });
