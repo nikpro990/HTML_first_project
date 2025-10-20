@@ -2,12 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const gustav = document.getElementById("gustav"); 
     const gustavdialog = document.getElementById("gustav-dialog");
     const walter = document.getElementById("walter");
+    const input = document.getElementById("input-js");
+    const sumbit = document.getElementById("sumbit-js");
     const walterdialog = document.getElementById("walter-dialog");
     const jessidialog = document.getElementById("jessi-dialog");
     const jessi = document.getElementById("jessi");
 
+    for(var i = 0; i < input; i++){
+     input.addEventListener("keydown", function(event) {
+      if(event.key = "Space"){
+       alert(i);
+      }
+     });
+    }
+    
+    
     let clickcount = 0; 
-    jessi.addEventListener("click", () => {
+     jessi.addEventListener("click", () => {
        clickcount++;
        if(clickcount == 1) {
         jessidialog.style.display = "block";   
@@ -27,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
        }
        if(clickcount2 == 2) {
         walterdialog.style.display = "none";   
+        
         clickcount2 = 0; 
       }
     });
@@ -39,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
        }
        if(clickcount3 == 2) {
         gustavdialog.style.display = "none";   
+       
         clickcount3 = 0; 
       }
     });
