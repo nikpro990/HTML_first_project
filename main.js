@@ -6,17 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const sumbit = document.getElementById("sumbit-js");
     const walterdialog = document.getElementById("walter-dialog");
     const jessidialog = document.getElementById("jessi-dialog");
-    const jessi = document.getElementById("jessi");
+    const jessi = document.getElementById("jessi");    
+    
+    
 
-    for(var i = 0; i < input; i++){
-     input.addEventListener("keydown", function(event) {
-      if(event.key = "Space"){
-       alert(i);
-      }
-     });
-    }
-    
-    
     let clickcount = 0; 
      jessi.addEventListener("click", () => {
        clickcount++;
