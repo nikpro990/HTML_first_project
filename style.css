@@ -103,7 +103,6 @@ header:hover{
   display: flex;
 }
 
-
 .jessi-dialog{
   display: none;
   animation-name: card-anim;
@@ -129,6 +128,7 @@ header:hover{
 
 }
 
+
 img{
   box-shadow: 1px 2px 18px black;
   position: absolute;
@@ -152,6 +152,7 @@ img{
   margin-bottom: 30px;
   margin-left: 20px;
 }
+
 
 .inline{
   bottom: 20px;
