@@ -8,7 +8,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const jessidialog = document.getElementById("jessi-dialog");
     const jessi = document.getElementById("jessi");    
     
-    
+
+    let isReady = prompt("Готов заказ или нет");
+    if(isReady == "Да"){
+      console.log("Ура");
+    }
+    if(isReady == "Нет"){
+      console.log("Ну ладно");
+    }
+
+    let name = prompt("Введите кем ты будешь");
+    switch(name){
+      case 'Гость':
+       let passwordGuest = prompt("Пароль");
+       if(passwordGuest == 1111){
+        console.log("Ты гость");
+       }
+      break;
+      case 'Sudo':
+       let passwordSudo = prompt("Пароль");
+       if(passwordSudo == 1234567){
+        console.log("Ты суперпользователь");
+       }
+       break;
+      case 'Админ':
+        let passwordAdmin = prompt("Пароль");
+        if(passwordAdmin == 12345){
+         console.log("Ты админ");
+        }
+       break; 
+      default:
+        console.log("Нету такого");
+    }
+
 
     let clickcount = 0; 
      jessi.addEventListener("click", () => {
