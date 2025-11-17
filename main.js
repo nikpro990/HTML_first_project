@@ -13,9 +13,40 @@ document.addEventListener("DOMContentLoaded", () => {
         JavaScript_Codes();
     });
 
-  function JavaScript_Codes(){
+    function showName(){
+      console.log("Никита");
+    }
 
+    showName();
+    
+    function sumaNumber(){
+      let number = 3;
+      let number1 = 2;
+      let number2 = 4;
+      console.log(number + number1 + number2);
+    }
 
+    sumaNumber();
+
+    function ymnoNumber(){
+      let number = 3;
+      let number1 = 2;
+      let number2 = 4;
+      console.log(number * number1 * number2);
+    }
+
+    ymnoNumber();
+
+    function JavaScript_Codes(){
+        
+
+        /*  
+        бесконечно через определенное количество времени
+        setInterval(() => {
+            alert("интервал");
+         }, 1000);     
+         */
+         
          let string3 = prompt("Введите слово для посчета количество букв");
          let count3;
          let letterCount = 0;
