@@ -14,20 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   function JavaScript_Codes(){
-    let fruitWorld = "Ананас";
-    let fruitWorldCount = 0;
 
-    for(let letter of fruitWorld.toLowerCase()){
-      if(letter === "a") fruitWorldCount++;
-    }
 
-    console.log("Букв в слове ${fruitWorld}:", fruitWorldCount);
-
-    let string3 = prompt("Введите слово для посчета количество букв");
-     
-       for(let count of string3){
-         console.log("Количество букв: " + count);
-       } 
+         let string3 = prompt("Введите слово для посчета количество букв");
+         let count3;
+         let letterCount = 0;
+         
+         do{ 
+          for(count3 of string3){
+            letterCount++;
+            console.log("Количество букв: " + letterCount);
+           }
+          }while(letterCount < count3)
     
 
     for(var i =  1; i < 11; i++){
