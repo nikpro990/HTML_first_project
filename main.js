@@ -36,9 +36,63 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     ymnoNumber();
+    
 
     function JavaScript_Codes(){
-        
+      
+      let arr = [1,4,5];
+      arr.splice(1,0,2,3);
+      console.log(arr);
+       
+
+      let numbers2 = [1,2,3];
+      numbers2.shift();
+      console.log(numbers2);
+     
+      let numbers1 = [2,3];
+      numbers1.unshift(1);
+      console.log(numbers1);
+
+      let nums = [5, 10, 15];
+      nums.pop();
+      console.log(nums);
+
+      let fruits0 = ["груша", "банан", "дыня"];
+      let last = fruits0.pop();
+
+     console.log(fruits0);
+     console.log(last);
+
+      let breakingbad = ["Уолтр", "Джессе"];
+      breakingbad.push("Густав");
+      console.log(breakingbad);  
+      
+      let numbers0 = [1,2,3,4];
+      numbers0.push(5);
+      console.log(numbers0);  
+      
+      let students = [
+          { name: "Анна", age: 15 },
+          { name: "Ирина", age: 16 }
+        ];
+      
+        for(let student of students){
+          console.log(student);
+        }
+
+       let  fruits = ["яблоко", "банан", "груша"];
+        for(let fruit of fruits){
+          console.log(fruit);
+        }  
+
+        let numbers = [10,20,30];
+        for(var i = 0; i < numbers.length; i++){
+          console.log(numbers[i]);
+        }
+      
+        let characters = ["Хайзенрберг", "Джессе", "Тука", "Скайлер"];
+
+        console.log(characters);
 
         /*  
         бесконечно через определенное количество времени
