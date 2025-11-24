@@ -39,7 +39,25 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     function JavaScript_Codes(){
+      let innerPlanets = ["Меркурий","Земля","Венера","Марс",];
+      let outerPlanets = ["Юпитер","Сатурн","Уран","Нептун",];
+
+      let allPlanets = innerPlanets.concat(outerPlanets);
+      console.log(allPlanets);
+
+      let boxes = [
+        {weigth: 2, label: "Легкая" },
+        {weigth: 2, label: "Легкая" },
+        {weigth: 2, label: "Легкая" },
+        
+      ]
       
+      let nums1 = [5,12,3,18];
+      let n;
+      nums1.filter(n => n % 10 === 0)
+      console.log(nums1);
+
+
       let arr = [1,4,5];
       arr.splice(1,0,2,3);
       console.log(arr);
