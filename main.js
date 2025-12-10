@@ -8,7 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const jessidialog = document.getElementById("jessi-dialog");
     const jessi = document.getElementById("jessi");    
     const buttonJS = document.getElementById("button-start");
-    
+    const buttonJSON = document.getElementById("button-start-json");
+
+    buttonJSON.addEventListener("click", function(){
+       import Data from './data.json' assert { type: 'json' };
+        
+       console.log(Data.age);
+      });
+
     buttonJS.addEventListener("click", () => {
         JavaScript_Codes();
     });
