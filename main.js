@@ -1,3 +1,5 @@
+import data from './data.json' with { type: 'json'};
+
 document.addEventListener("DOMContentLoaded", () => {
     const gustav = document.getElementById("gustav"); 
     const gustavdialog = document.getElementById("gustav-dialog");
@@ -9,12 +11,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const jessi = document.getElementById("jessi");    
     const buttonJS = document.getElementById("button-start");
     const buttonJSON = document.getElementById("button-start-json");
+    const buttonHTTP = document.getElementById("button-start-http");
+
+    buttonHTTP.addEventListener("click", function(){
+     fetch(data)
+      .then(response => {
+        if(!response.ok){
+          throw new Error("ошибка");
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Данные получены", data);
+      });
+      
+    });
 
     buttonJSON.addEventListener("click", function(){
-       import Data from './data.json' assert { type: 'json' };
-        
-       console.log(Data.age);
-      });
+      
+    });
 
     buttonJS.addEventListener("click", () => {
         JavaScript_Codes();
