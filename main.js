@@ -12,6 +12,120 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonJS = document.getElementById("button-start");
     const buttonJSON = document.getElementById("button-start-json");
     const buttonHTTP = document.getElementById("button-start-http");
+    const buttonOOP = document.getElementById("button-start-oop");
+
+    buttonOOP.addEventListener("click", function(){
+      class Animal{
+        voice(){
+          console.log("Gav");
+        }
+      }
+      
+      class Cat {
+        voice(){
+          console.log("Meow");
+        }
+      }
+      
+      const dog = new Animal
+      const cat = new Cat
+      cat.voice();
+      dog.voice();
+
+      function Human(firstName, lastName){
+        this.firstName = firstName
+        this.lastName = lastName
+        
+      }
+      
+      const chris = new Human('Chris', 'Coyir')
+      console.log(chris.firstName);
+      console.log(chris.lastName);
+
+      const zell = new Human('Zell', 'Liew');
+      console.log(zell.firstName);
+      console.log(zell.lastName)
+      
+      class Names{
+        firstName(){
+          console.log("lola");
+        }
+      }
+
+      const names = new Names
+      names.firstName();  
+
+      class Humann {
+        constructor(firstName, lastName){
+          this.firstName = firstName
+          this.firstName = lastName
+        }
+      }
+
+      const animalss = new Human("Cat", "Dog")
+      console.log(animalss.firstName);
+      console.log(animalss.lastName);
+
+      class Humannn {
+        init(firstName, lastName){ //тоже самое
+          this.firstName = firstName
+          this.firstName = lastName
+        }
+      }
+
+      /*
+      const chriss = Object.create(Humannn);
+      chriss.init("Chris", 'Coyier');
+
+      console.log(chriss.firstName);
+      console.log(chriss.lastName);
+      */
+      
+      function Humannnn(firstName, lastName){
+        return {
+          firstName,
+          lastName
+        }
+      }
+
+      const chrisss = Humannnn("Arch", "Linux")
+      console.log(chrisss.firstName);
+      console.log(chrisss.lastName);
+
+      function Humannnnn (firstName, lastName){
+        this.firstName = firstName
+        this.lastName = lastName
+        
+        this.sayHello = function(){
+          console.log(`Hello, I,m ${firstName}`);
+        }
+      }
+
+      function Humannnnnn(firstName, lastName){
+        this.firstName = firstName
+        this.lastName = lastName
+      }
+
+      Humannnnnn.prototype.sayHello = function () {
+        console.log(`Hello, I,m ${firstName}`);
+      }
+
+      class Buttonn {
+        clickc(){
+          console.log("Action");
+        }
+      } 
+
+      class Delete extends Buttonn{
+        clickcc(){
+          console.log("Delete");
+        }
+      }
+
+      const clickk = new Buttonn;
+      clickk.clickc();
+
+    });
 
     buttonHTTP.addEventListener("click", function(){
      fetch(data)
@@ -28,7 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     buttonJSON.addEventListener("click", function(){
-      
+      const jsonstring = JSON.stringify(data);
+      console.log(jsonstring);
     });
 
     buttonJS.addEventListener("click", () => {
