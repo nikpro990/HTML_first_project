@@ -13,8 +13,68 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonJSON = document.getElementById("button-start-json");
     const buttonHTTP = document.getElementById("button-start-http");
     const buttonOOP = document.getElementById("button-start-oop");
+    const buttonLocal = document.getElementById("button-start-localdata")
+
+    buttonLocal.addEventListener("click", function() {
+      localStorage.setItem("theme", "dark");
+      const theme = localStorage.getItem("theme");
+      //localStorage.removeItem("theme"); очищает theme
+      //localStorage.clear(); удаляет все 
+      sessionStorage.setItem("step", 2);
+      const step = sessionStorage.getItem("step");
+      if(localStorage.getItem("theme")){
+        alert("Theme is have")
+      }
+      localStorage.setItem("user", {name: "Test"});
+      const data = { level: 3};
+      localStorage.setItem("game: ", JSON.stringify(data));
+      const game = JSON.parse(localStorage.getItem("game"));
+      console.log(game);
+    });
 
     buttonOOP.addEventListener("click", function(){
+      class Notification{
+        send(){
+          console.log("Send notification");
+        }
+      }
+
+      const notification = new Notification;
+      notification.send();
+
+      class EmailNotification extends Notification{
+        send(){
+          console.log("Send Email");
+        }
+      }
+
+      class SmsNotification extends Notification{
+        send(){
+          console.log("Send Sms");
+        }
+      }
+
+      const notificationEmail = new EmailNotification
+      const notificationSms = new SmsNotification
+      
+      notificationSms.send();
+      notificationEmail.send();
+
+      class SMSNotification{
+        dataSMS(){
+          const dataSms = ["БеларусБанк", "Termux"];
+          const notificationSms = new SmsNotification
+          const notificationEmail = new EmailNotification
+
+          dataSms.forEach(function(item, index){
+            console.log(notificationSms + item, notificationEmail + index);
+          });
+        } 
+      }
+      
+      const DataSms = new SMSNotification();
+      DataSms.dataSMS();
+
       class Animal{
         voice(){
           console.log("Gav");
