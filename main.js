@@ -1,4 +1,4 @@
-import data from './data.json' with { type: 'json'};
+import data from './data.json';
 
 document.addEventListener("DOMContentLoaded", () => {
     const gustav = document.getElementById("gustav"); 
@@ -14,6 +14,125 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonHTTP = document.getElementById("button-start-http");
     const buttonOOP = document.getElementById("button-start-oop");
     const buttonLocal = document.getElementById("button-start-localdata")
+    const buttonJSTasks = document.getElementById("button-start-js");
+
+    buttonJSTasks.addEventListener("click", function(){
+      let choiceTask = prompt(
+      "Какое задание вы хотите выбрать ?: 1.Переменные, 2.Массивы, 3.Циклы, 4.Функции");
+      if(choiceTask == 1){
+        peremens();
+      }
+      if(choiceTask == 2){
+        massivs();
+      }
+      if(choiceTask == 3){
+        shikls();
+      }
+      if(choiceTask == 4){
+        functions();
+      }
+
+      function peremens(){
+        const x = 10, y = 5;
+        console.log(x + y);
+        
+        const name = "I love JS";
+        console.log(name);
+
+        const price = 100, discount = 20;
+        console.log(price * discount / 100);
+
+        const isOnline = true;
+        console.log(isOnline);
+
+        const n = 7;
+        console.log(n * 2);
+
+        const messange = "";
+        console.log(messange);
+      }
+
+      function massivs(){
+        const data = [1,2,3];
+        console.log(data);
+
+        const data1 = ["Debian", "Arch linux", "Gentoo"];
+        console.log(data1[0]);
+
+        let data2 = [1,2,3];
+        data2.push(10);
+        console.log(data2);
+
+        let data3 = [1,2,3,4];
+        data3.splice(3,3);
+        console.log(data3);
+        
+        let data4 = [1,2,3,4];
+        data4.forEach(data4 => {
+          console.log(data4);
+        });
+
+        let data5 = [2,2];
+
+        data5.forEach(data5 => {
+          console.log(data5 + data5);
+        });
+
+        /*
+        let data6 = [1,2,3,4,5];
+        
+        let numberMin = data6[0];
+
+        for(var i = 0; data6.length; i++){
+          if(data6[i] < numberMin){
+            numberMin = data6[i];
+          }
+        }
+        console.log("Маленькое число: " + numberMin);
+        */
+
+        let data7 = [5,5];
+        data7.forEach(data7 => {
+          console.log(data7 * 2);
+        });
+
+      }
+
+      function shikls(){
+        for(var i = 1; i < 6; i++){
+          console.log(i);
+        }
+
+        for(var i = 5; i > 0; i--){
+          console.log(i);
+        }
+
+        for(var i = 0; i < 11; i++){
+         if(i % 2 == 0)
+          console.log(i);
+        }
+
+        let total = 0;
+        for(var i = 1; i < 11; i++){
+          total += i
+        }
+        console.log(total);
+
+        let text = "Hello";
+        for(var i = 0; i < 3; i++){
+          text + i;
+          console.log(text);
+        }
+
+      }
+
+      function functions(){
+        function sayHi(){
+          console.log("Hi!");
+        }
+
+      }
+    });
 
     buttonLocal.addEventListener("click", function() {
       localStorage.setItem("theme", "dark");
